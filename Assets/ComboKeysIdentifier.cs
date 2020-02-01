@@ -9,12 +9,20 @@ using SUPERLASER;
 
 public class ComboKeysIdentifier : MonoBehaviour
 {
+    [SerializeField] private GameObject upArrow;
+    [SerializeField] private GameObject downArrow;
+    [SerializeField] private GameObject leftArrow;
+    [SerializeField] private GameObject rightArrow;
+    [SerializeField] private Transform targetUIPanel;
+
     [SerializeField] private int playerNumber;
 
     public enum ComboKeys { UP, DOWN, LEFT, RIGHT };
 
     public enum ComboType { BUILD_BLOCK, BUILD_TURRET }
+    [HideInInspector]
     public UnityEvent On_Build_Block_Combo = new UnityEvent();
+    [HideInInspector]
     public UnityEvent On_Build_Turret_Combo = new UnityEvent();
 
     [Serializable]
@@ -64,22 +72,40 @@ public class ComboKeysIdentifier : MonoBehaviour
     private void AddComboToQueue(ComboKeys comboType)
     {
         comboHistroy.Enqueue(comboType);
-        if (comboHistroy.Count > 10)
+        if (comboHistroy.Count > 7)
+        {
             comboHistroy.Dequeue();
+            Destroy(targetUIPanel.GetChild(0).gameObject);
+        }
 
-        //string text = "Player" + playerNumber;
-        //foreach (ComboKeys combo in comboHistroy)
-        //{
-        //    text += ", " + combo.ToString();
+        GameObject arrowPrefab = null;
 
-        //    Debug.Log(text);
-        //}
+        switch (comboType)
+        {
+            case ComboKeys.UP:
+                arrowPrefab = upArrow;
+                break;
+            case ComboKeys.DOWN:
+                arrowPrefab = downArrow;
+                break;
+            case ComboKeys.LEFT:
+                arrowPrefab = leftArrow;
+                break;
+            case ComboKeys.RIGHT:
+                arrowPrefab = rightArrow;
+                break;
+        }
 
+        Instantiate(arrowPrefab, targetUIPanel);
     }
 
     private void ClearComboHistroy()
     {
         comboHistroy.Clear();
+        foreach(GameObject child in targetUIPanel.GetChildrensAsGameObjects())
+        {
+            Destroy(child);
+        }
     }
 
     private void CheckForCombo()
@@ -99,7 +125,7 @@ public class ComboKeysIdentifier : MonoBehaviour
                         On_Build_Turret_Combo.Invoke();
                         break;
                 }
-                comboHistroy.Clear();
+                ClearComboHistroy();
             }
         }
     }
