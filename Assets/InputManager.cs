@@ -7,39 +7,39 @@ using UnityEngine.Events;
 public class InputManager : MonoBehaviour
 {
     // Events
-    private UnityEvent On_P3_LS_UP_Click = new UnityEvent();
-    private UnityEvent On_P3_LS_DOWN_Click = new UnityEvent();
-    private UnityEvent On_P3_LS_LEFT_Click = new UnityEvent();
-    private UnityEvent On_P3_LS_RIGHT_Click = new UnityEvent();
-    private UnityEvent On_P3_DPAD_UP_Click = new UnityEvent();
-    private UnityEvent On_P3_DPAD_DOWN_Click = new UnityEvent();
-    private UnityEvent On_P3_DPAD_LEFT_Click = new UnityEvent();
-    private UnityEvent On_P3_DPAD_RIGHT_Click = new UnityEvent();
-    private UnityEvent On_P3_LB_Click = new UnityEvent();
-    private UnityEvent On_P3_LT_Click = new UnityEvent();
-    private UnityEvent On_P3_RB_Click = new UnityEvent();
-    private UnityEvent On_P3_RT_Click = new UnityEvent();
-    private UnityEvent On_P3_KEYUP_Click = new UnityEvent();
-    private UnityEvent On_P3_KEYDOWN_Click = new UnityEvent();
-    private UnityEvent On_P3_KEYLEFT_Click = new UnityEvent();
-    private UnityEvent On_P3_KEYRIGHT_Click = new UnityEvent();
+    public UnityEvent On_P3_LS_UP_Click = new UnityEvent();
+    public UnityEvent On_P3_LS_DOWN_Click = new UnityEvent();
+    public UnityEvent On_P3_LS_LEFT_Click = new UnityEvent();
+    public UnityEvent On_P3_LS_RIGHT_Click = new UnityEvent();
+    public UnityEvent On_P3_DPAD_UP_Click = new UnityEvent();
+    public UnityEvent On_P3_DPAD_DOWN_Click = new UnityEvent();
+    public UnityEvent On_P3_DPAD_LEFT_Click = new UnityEvent();
+    public UnityEvent On_P3_DPAD_RIGHT_Click = new UnityEvent();
+    public UnityEvent On_P3_LB_Click = new UnityEvent();
+    public UnityEvent On_P3_LT_Click = new UnityEvent();
+    public UnityEvent On_P3_RB_Click = new UnityEvent();
+    public UnityEvent On_P3_RT_Click = new UnityEvent();
+    public UnityEvent On_P3_KEYUP_Click = new UnityEvent();
+    public UnityEvent On_P3_KEYDOWN_Click = new UnityEvent();
+    public UnityEvent On_P3_KEYLEFT_Click = new UnityEvent();
+    public UnityEvent On_P3_KEYRIGHT_Click = new UnityEvent();
     //==================================
-    private UnityEvent On_P2_LS_UP_Click = new UnityEvent();
-    private UnityEvent On_P2_LS_DOWN_Click = new UnityEvent();
-    private UnityEvent On_P2_LS_LEFT_Click = new UnityEvent();
-    private UnityEvent On_P2_LS_RIGHT_Click = new UnityEvent();
-    private UnityEvent On_P2_DPAD_UP_Click = new UnityEvent();
-    private UnityEvent On_P2_DPAD_DOWN_Click = new UnityEvent();
-    private UnityEvent On_P2_DPAD_LEFT_Click = new UnityEvent();
-    private UnityEvent On_P2_DPAD_RIGHT_Click = new UnityEvent();
-    private UnityEvent On_P2_LB_Click = new UnityEvent();
-    private UnityEvent On_P2_LT_Click = new UnityEvent();
-    private UnityEvent On_P2_RB_Click = new UnityEvent();
-    private UnityEvent On_P2_RT_Click = new UnityEvent();
-    private UnityEvent On_P2_KEYUP_Click = new UnityEvent();
-    private UnityEvent On_P2_KEYDOWN_Click = new UnityEvent();
-    private UnityEvent On_P2_KEYLEFT_Click = new UnityEvent();
-    private UnityEvent On_P2_KEYRIGHT_Click = new UnityEvent();
+    public UnityEvent On_P2_LS_UP_Click = new UnityEvent();
+    public UnityEvent On_P2_LS_DOWN_Click = new UnityEvent();
+    public UnityEvent On_P2_LS_LEFT_Click = new UnityEvent();
+    public UnityEvent On_P2_LS_RIGHT_Click = new UnityEvent();
+    public UnityEvent On_P2_DPAD_UP_Click = new UnityEvent();
+    public UnityEvent On_P2_DPAD_DOWN_Click = new UnityEvent();
+    public UnityEvent On_P2_DPAD_LEFT_Click = new UnityEvent();
+    public UnityEvent On_P2_DPAD_RIGHT_Click = new UnityEvent();
+    public UnityEvent On_P2_LB_Click = new UnityEvent();
+    public UnityEvent On_P2_LT_Click = new UnityEvent();
+    public UnityEvent On_P2_RB_Click = new UnityEvent();
+    public UnityEvent On_P2_RT_Click = new UnityEvent();
+    public UnityEvent On_P2_KEYUP_Click = new UnityEvent();
+    public UnityEvent On_P2_KEYDOWN_Click = new UnityEvent();
+    public UnityEvent On_P2_KEYLEFT_Click = new UnityEvent();
+    public UnityEvent On_P2_KEYRIGHT_Click = new UnityEvent();
 
     // ButtonDownReady
     private bool P3_LS_V_BtnDownRdy = true;
@@ -53,6 +53,17 @@ public class InputManager : MonoBehaviour
     private bool P2_DPAD_H_BtnDownRdy = true; 
     private bool P2_LT_BtnDownRdy = true;
     private bool P2_RT_BtnDownRdy = true;
+
+
+    public static InputManager instance;
+
+    private void OnEnable()
+    {
+        if (!instance)
+            instance = this;
+        else
+            Destroy(gameObject);
+    }
 
     private void Start()
     {
