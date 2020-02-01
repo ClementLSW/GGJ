@@ -6,6 +6,7 @@ using NaughtyAttributes;
 using UnityEngine.Events;
 using System.Linq;
 using SUPERLASER;
+using UnityEngine.InputSystem;
 
 public class ComboKeysIdentifier : MonoBehaviour
 {
@@ -16,12 +17,15 @@ public class ComboKeysIdentifier : MonoBehaviour
     [SerializeField] private Transform targetUIPanel;
 
     [SerializeField] private int playerNumber;
+    [SerializeField] private GridController gc;
 
     public enum ComboKeys { UP, DOWN, LEFT, RIGHT };
 
-    public enum ComboType { BUILD_BLOCK, BUILD_TURRET }
+    public enum ComboType { BUILD_WOOD, BUILD_METAL, BUILD_TURRET }
     [HideInInspector]
     public UnityEvent On_Build_Block_Combo = new UnityEvent();
+    [HideInInspector]
+    public UnityEvent On_Build_Metal_Combo = new UnityEvent();
     [HideInInspector]
     public UnityEvent On_Build_Turret_Combo = new UnityEvent();
 
@@ -65,8 +69,20 @@ public class ComboKeysIdentifier : MonoBehaviour
                 break;
         }
 
-        On_Build_Block_Combo.AddListener(delegate { Debug.Log("On_Build_Block_Combo"); });
-        On_Build_Turret_Combo.AddListener(delegate { Debug.Log("On_Build_Turret_Combo"); });
+        On_Build_Block_Combo.AddListener(delegate { gc.Build(ComboType.BUILD_WOOD); });
+        On_Build_Metal_Combo.AddListener(delegate { gc.Build(ComboType.BUILD_METAL); });
+        On_Build_Turret_Combo.AddListener(delegate { gc.Build(ComboType.BUILD_TURRET); });
+    }
+
+    private void Update()
+    {
+        if (playerNumber == 1)
+            if (Gamepad.all[0].rightShoulder.wasPressedThisFrame && comboHistroy.Count == 0)
+                gc.DestroySelectedBuilding();
+
+        if (playerNumber == 2)
+            if (Gamepad.all[1].rightShoulder.wasPressedThisFrame && comboHistroy.Count == 0)
+                gc.DestroySelectedBuilding();
     }
 
     private void AddComboToQueue(ComboKeys comboType)
@@ -118,8 +134,11 @@ public class ComboKeysIdentifier : MonoBehaviour
             {
                 switch (combo.ComboType)
                 {
-                    case ComboType.BUILD_BLOCK:
+                    case ComboType.BUILD_WOOD:
                         On_Build_Block_Combo.Invoke();
+                        break;
+                    case ComboType.BUILD_METAL:
+                        On_Build_Metal_Combo.Invoke();
                         break;
                     case ComboType.BUILD_TURRET:
                         On_Build_Turret_Combo.Invoke();

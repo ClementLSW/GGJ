@@ -123,6 +123,8 @@ public class InputManager : MonoBehaviour
         if (Gamepad.all[0].bButton.wasPressedThisFrame)
             On_P1_KEYRIGHT_Click.Invoke();
 
+        if (Gamepad.all.Count < 2)
+            return;
 
         if (Gamepad.all[1].dpad.up.wasPressedThisFrame)
             On_P2_DPAD_UP_Click.Invoke();
