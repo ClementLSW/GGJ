@@ -30,19 +30,19 @@ public class GridController : MonoBehaviour
         selectedTile = startPosition;
         SetAllTiles();
 
+        if (playerNumber == 1)
+        {
+            InputManager.instance.On_P1_DPAD_UP_Click.AddListener(delegate { MoveCursor(MoveDirection.UP); });
+            InputManager.instance.On_P1_DPAD_DOWN_Click.AddListener(delegate { MoveCursor(MoveDirection.DOWN); });
+            InputManager.instance.On_P1_DPAD_LEFT_Click.AddListener(delegate { MoveCursor(MoveDirection.LEFT); });
+            InputManager.instance.On_P1_DPAD_RIGHT_Click.AddListener(delegate { MoveCursor(MoveDirection.RIGHT); });
+        }
         if (playerNumber == 2)
         {
             InputManager.instance.On_P2_DPAD_UP_Click.AddListener(delegate { MoveCursor(MoveDirection.UP); });
             InputManager.instance.On_P2_DPAD_DOWN_Click.AddListener(delegate { MoveCursor(MoveDirection.DOWN); });
             InputManager.instance.On_P2_DPAD_LEFT_Click.AddListener(delegate { MoveCursor(MoveDirection.LEFT); });
             InputManager.instance.On_P2_DPAD_RIGHT_Click.AddListener(delegate { MoveCursor(MoveDirection.RIGHT); });
-        }
-        if (playerNumber == 3)
-        {
-            InputManager.instance.On_P3_DPAD_UP_Click.AddListener(delegate { MoveCursor(MoveDirection.UP); });
-            InputManager.instance.On_P3_DPAD_DOWN_Click.AddListener(delegate { MoveCursor(MoveDirection.DOWN); });
-            InputManager.instance.On_P3_DPAD_LEFT_Click.AddListener(delegate { MoveCursor(MoveDirection.LEFT); });
-            InputManager.instance.On_P3_DPAD_RIGHT_Click.AddListener(delegate { MoveCursor(MoveDirection.RIGHT); });
         }
     }
 

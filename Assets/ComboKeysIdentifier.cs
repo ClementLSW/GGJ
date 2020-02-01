@@ -38,30 +38,30 @@ public class ComboKeysIdentifier : MonoBehaviour
 
     private void Start()
     {
-        if(playerNumber == 2)
+        if (playerNumber == 1)
+        {
+            InputManager.instance.On_P1_KEYUP_Click.AddListener(delegate { AddComboToQueue(ComboKeys.UP); });
+            InputManager.instance.On_P1_KEYDOWN_Click.AddListener(delegate { AddComboToQueue(ComboKeys.DOWN); });
+            InputManager.instance.On_P1_KEYLEFT_Click.AddListener(delegate { AddComboToQueue(ComboKeys.LEFT); });
+            InputManager.instance.On_P1_KEYRIGHT_Click.AddListener(delegate { AddComboToQueue(ComboKeys.RIGHT); });
+        }
+        if (playerNumber == 2)
         {
             InputManager.instance.On_P2_KEYUP_Click.AddListener(delegate { AddComboToQueue(ComboKeys.UP); });
             InputManager.instance.On_P2_KEYDOWN_Click.AddListener(delegate { AddComboToQueue(ComboKeys.DOWN); });
             InputManager.instance.On_P2_KEYLEFT_Click.AddListener(delegate { AddComboToQueue(ComboKeys.LEFT); });
             InputManager.instance.On_P2_KEYRIGHT_Click.AddListener(delegate { AddComboToQueue(ComboKeys.RIGHT); });
         }
-        if (playerNumber == 2)
-        {
-            InputManager.instance.On_P3_KEYUP_Click.AddListener(delegate { AddComboToQueue(ComboKeys.UP); });
-            InputManager.instance.On_P3_KEYDOWN_Click.AddListener(delegate { AddComboToQueue(ComboKeys.DOWN); });
-            InputManager.instance.On_P3_KEYLEFT_Click.AddListener(delegate { AddComboToQueue(ComboKeys.LEFT); });
-            InputManager.instance.On_P3_KEYRIGHT_Click.AddListener(delegate { AddComboToQueue(ComboKeys.RIGHT); });
-        }
 
         switch (playerNumber)
         {
+            case 1:
+                InputManager.instance.On_P1_RT_Click.AddListener(delegate { CheckForCombo(); });
+                InputManager.instance.On_P1_RB_Click.AddListener(delegate { ClearComboHistroy(); });
+                break;
             case 2:
                 InputManager.instance.On_P2_RT_Click.AddListener(delegate { CheckForCombo(); });
                 InputManager.instance.On_P2_RB_Click.AddListener(delegate { ClearComboHistroy(); });
-                break;
-            case 3:
-                InputManager.instance.On_P3_RT_Click.AddListener(delegate { CheckForCombo(); });
-                InputManager.instance.On_P3_RB_Click.AddListener(delegate { ClearComboHistroy(); });
                 break;
         }
 
@@ -102,7 +102,7 @@ public class ComboKeysIdentifier : MonoBehaviour
     private void ClearComboHistroy()
     {
         comboHistroy.Clear();
-        foreach(GameObject child in targetUIPanel.GetChildrensAsGameObjects())
+        foreach (GameObject child in targetUIPanel.GetChildrensAsGameObjects())
         {
             Destroy(child);
         }
@@ -114,7 +114,7 @@ public class ComboKeysIdentifier : MonoBehaviour
 
         foreach (Combo combo in filteredCombo)
         {
-            if(comboHistroy.ToList().ContainsSequence(combo.ComboList))
+            if (comboHistroy.ToList().ContainsSequence(combo.ComboList))
             {
                 switch (combo.ComboType)
                 {
