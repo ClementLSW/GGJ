@@ -18,12 +18,16 @@ public class GridController : MonoBehaviour
     [SerializeField] private int minWidth;
     [SerializeField] private int maxWidth;
 
+    [Space(10)]
+    [SerializeField] private Vector2 startPosition = new Vector2(1, 1);
+
     private enum MoveDirection { UP, DOWN, LEFT, RIGHT };
 
-    private Vector2 selectedTile = new Vector2(1, 1);
+    private Vector2 selectedTile;
 
     private void Start()
     {
+        selectedTile = startPosition;
         SetAllTiles();
 
         if (playerNumber == 2)
@@ -49,7 +53,7 @@ public class GridController : MonoBehaviour
         {
             gridTile.SetTileMode(GridTile.TileMode.UNSELECTED);
         }
-        gridTiles.Find(x => x.TileIndex == new Vector2(1, 1)).SetTileMode(GridTile.TileMode.SELECTED);
+        gridTiles.Find(x => x.TileIndex == startPosition).SetTileMode(GridTile.TileMode.SELECTED);
     }
 
     private void MoveCursor(MoveDirection dir)

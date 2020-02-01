@@ -18,7 +18,7 @@ public class GridTile : MonoBehaviour
 
     public enum TileMode { UNSELECTED, SELECTED };
 
-    private void Start()
+    private void OnEnable()
     {
         tileImg = GetComponent<SpriteRenderer>();
     }
