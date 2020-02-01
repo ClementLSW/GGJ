@@ -67,47 +67,47 @@ public class InputManager : MonoBehaviour
 
     private void Start()
     {
-        On_P3_LS_UP_Click.AddListener(delegate { Debug.Log("On_P3_LS_UP_Click"); });
-        On_P3_LS_DOWN_Click.AddListener(delegate { Debug.Log("On_P3_LS_DOWN_Click"); });
-        On_P3_LS_LEFT_Click.AddListener(delegate { Debug.Log("On_P3_LS_LEFT_Click"); });
-        On_P3_LS_RIGHT_Click.AddListener(delegate { Debug.Log("On_P3_LS_RIGHT_Click"); });
+        //On_P3_LS_UP_Click.AddListener(delegate { Debug.Log("On_P3_LS_UP_Click"); });
+        //On_P3_LS_DOWN_Click.AddListener(delegate { Debug.Log("On_P3_LS_DOWN_Click"); });
+        //On_P3_LS_LEFT_Click.AddListener(delegate { Debug.Log("On_P3_LS_LEFT_Click"); });
+        //On_P3_LS_RIGHT_Click.AddListener(delegate { Debug.Log("On_P3_LS_RIGHT_Click"); });
 
-        On_P3_DPAD_UP_Click.AddListener(delegate { Debug.Log("On_P3_DPAD_UP_Click"); });
-        On_P3_DPAD_DOWN_Click.AddListener(delegate { Debug.Log("On_P3_DPAD_DOWN_Click"); });
-        On_P3_DPAD_LEFT_Click.AddListener(delegate { Debug.Log("On_P3_DPAD_LEFT_Click"); });
-        On_P3_DPAD_RIGHT_Click.AddListener(delegate { Debug.Log("On_P3_DPAD_RIGHT_Click"); });
+        //On_P3_DPAD_UP_Click.AddListener(delegate { Debug.Log("On_P3_DPAD_UP_Click"); });
+        //On_P3_DPAD_DOWN_Click.AddListener(delegate { Debug.Log("On_P3_DPAD_DOWN_Click"); });
+        //On_P3_DPAD_LEFT_Click.AddListener(delegate { Debug.Log("On_P3_DPAD_LEFT_Click"); });
+        //On_P3_DPAD_RIGHT_Click.AddListener(delegate { Debug.Log("On_P3_DPAD_RIGHT_Click"); });
 
-        On_P3_LB_Click.AddListener(delegate { Debug.Log("On_P3_LB_Click"); });
-        On_P3_LT_Click.AddListener(delegate { Debug.Log("On_P3_LT_Click"); });
-        On_P3_RB_Click.AddListener(delegate { Debug.Log("On_P3_RB_Click"); });
-        On_P3_RT_Click.AddListener(delegate { Debug.Log("On_P3_RT_Click"); });
+        //On_P3_LB_Click.AddListener(delegate { Debug.Log("On_P3_LB_Click"); });
+        //On_P3_LT_Click.AddListener(delegate { Debug.Log("On_P3_LT_Click"); });
+        //On_P3_RB_Click.AddListener(delegate { Debug.Log("On_P3_RB_Click"); });
+        //On_P3_RT_Click.AddListener(delegate { Debug.Log("On_P3_RT_Click"); });
 
-        On_P3_KEYUP_Click.AddListener(delegate { Debug.Log("On_P3_KEYUP_Click"); });
-        On_P3_KEYDOWN_Click.AddListener(delegate { Debug.Log("On_P3_KEYDOWN_Click"); });
-        On_P3_KEYLEFT_Click.AddListener(delegate { Debug.Log("On_P3_KEYLEFT_Click"); });
-        On_P3_KEYRIGHT_Click.AddListener(delegate { Debug.Log("On_P3_KEYRIGHT_Click"); });
+        //On_P3_KEYUP_Click.AddListener(delegate { Debug.Log("On_P3_KEYUP_Click"); });
+        //On_P3_KEYDOWN_Click.AddListener(delegate { Debug.Log("On_P3_KEYDOWN_Click"); });
+        //On_P3_KEYLEFT_Click.AddListener(delegate { Debug.Log("On_P3_KEYLEFT_Click"); });
+        //On_P3_KEYRIGHT_Click.AddListener(delegate { Debug.Log("On_P3_KEYRIGHT_Click"); });
 
-        //==================================
+        ////==================================
 
-        On_P2_LS_UP_Click.AddListener(delegate { Debug.Log("On_P2_LS_UP_Click"); });
-        On_P2_LS_DOWN_Click.AddListener(delegate { Debug.Log("On_P2_LS_DOWN_Click"); });
-        On_P2_LS_LEFT_Click.AddListener(delegate { Debug.Log("On_P2_LS_LEFT_Click"); });
-        On_P2_LS_RIGHT_Click.AddListener(delegate { Debug.Log("On_P2_LS_RIGHT_Click"); });
+        //On_P2_LS_UP_Click.AddListener(delegate { Debug.Log("On_P2_LS_UP_Click"); });
+        //On_P2_LS_DOWN_Click.AddListener(delegate { Debug.Log("On_P2_LS_DOWN_Click"); });
+        //On_P2_LS_LEFT_Click.AddListener(delegate { Debug.Log("On_P2_LS_LEFT_Click"); });
+        //On_P2_LS_RIGHT_Click.AddListener(delegate { Debug.Log("On_P2_LS_RIGHT_Click"); });
 
-        On_P2_DPAD_UP_Click.AddListener(delegate { Debug.Log("On_P2_DPAD_UP_Click"); });
-        On_P2_DPAD_DOWN_Click.AddListener(delegate { Debug.Log("On_P2_DPAD_DOWN_Click"); });
-        On_P2_DPAD_LEFT_Click.AddListener(delegate { Debug.Log("On_P2_DPAD_LEFT_Click"); });
-        On_P2_DPAD_RIGHT_Click.AddListener(delegate { Debug.Log("On_P2_DPAD_RIGHT_Click"); });
+        //On_P2_DPAD_UP_Click.AddListener(delegate { Debug.Log("On_P2_DPAD_UP_Click"); });
+        //On_P2_DPAD_DOWN_Click.AddListener(delegate { Debug.Log("On_P2_DPAD_DOWN_Click"); });
+        //On_P2_DPAD_LEFT_Click.AddListener(delegate { Debug.Log("On_P2_DPAD_LEFT_Click"); });
+        //On_P2_DPAD_RIGHT_Click.AddListener(delegate { Debug.Log("On_P2_DPAD_RIGHT_Click"); });
 
-        On_P2_LB_Click.AddListener(delegate { Debug.Log("On_P2_LB_Click"); });
-        On_P2_LT_Click.AddListener(delegate { Debug.Log("On_P2_LT_Click"); });
-        On_P2_RB_Click.AddListener(delegate { Debug.Log("On_P2_RB_Click"); });
-        On_P2_RT_Click.AddListener(delegate { Debug.Log("On_P2_RT_Click"); });
+        //On_P2_LB_Click.AddListener(delegate { Debug.Log("On_P2_LB_Click"); });
+        //On_P2_LT_Click.AddListener(delegate { Debug.Log("On_P2_LT_Click"); });
+        //On_P2_RB_Click.AddListener(delegate { Debug.Log("On_P2_RB_Click"); });
+        //On_P2_RT_Click.AddListener(delegate { Debug.Log("On_P2_RT_Click"); });
 
-        On_P2_KEYUP_Click.AddListener(delegate { Debug.Log("On_P2_KEYUP_Click"); });
-        On_P2_KEYDOWN_Click.AddListener(delegate { Debug.Log("On_P2_KEYDOWN_Click"); });
-        On_P2_KEYLEFT_Click.AddListener(delegate { Debug.Log("On_P2_KEYLEFT_Click"); });
-        On_P2_KEYRIGHT_Click.AddListener(delegate { Debug.Log("On_P2_KEYRIGHT_Click"); });
+        //On_P2_KEYUP_Click.AddListener(delegate { Debug.Log("On_P2_KEYUP_Click"); });
+        //On_P2_KEYDOWN_Click.AddListener(delegate { Debug.Log("On_P2_KEYDOWN_Click"); });
+        //On_P2_KEYLEFT_Click.AddListener(delegate { Debug.Log("On_P2_KEYLEFT_Click"); });
+        //On_P2_KEYRIGHT_Click.AddListener(delegate { Debug.Log("On_P2_KEYRIGHT_Click"); });
     }
 
     private void Update()
