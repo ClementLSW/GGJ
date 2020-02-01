@@ -23,6 +23,8 @@ public class GridTile : MonoBehaviour
         tileImg = GetComponent<SpriteRenderer>();
     }
 
+    public GameObject building;
+
     public void SetTileMode(TileMode tileMode)
     {
         switch (tileMode)
