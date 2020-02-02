@@ -85,6 +85,9 @@ public class InputManager : MonoBehaviour
 
     private void ProcessControllerKeys()
     {
+        if (Gamepad.all.Count < 1)
+            return;
+
         if (Gamepad.all[0].dpad.up.wasPressedThisFrame)
             On_P1_DPAD_UP_Click.Invoke();
 
