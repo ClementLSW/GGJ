@@ -11,7 +11,6 @@ public class Turret : Block, IDamagable
     [SerializeField] private float velocity;
     [SerializeField] private float firingRate;
     [SerializeField] private AudioClip clip;
-    [SerializeField] private GameObject SM;
 
     private SUPERLASER.Timer firingTimer = new SUPERLASER.Timer();
 
@@ -47,7 +46,7 @@ public class Turret : Block, IDamagable
             Rigidbody2D projectile = Instantiate(ammo, firingPoint.position, firingPoint.rotation).GetComponent<Rigidbody2D>();
             projectile.gameObject.transform.parent = null;
             projectile.velocity = projectile.transform.up * new Vector2(velocity, 0);
-            SM.GetComponent<SoundManager>().PlaySound(clip);
+            SoundManager.Instance.PlaySound(clip);
         }
     }
 }

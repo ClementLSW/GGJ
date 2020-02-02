@@ -16,6 +16,10 @@ public class Block : MonoBehaviour, IDamagable
     [SerializeField] private Sprite halfHP;
     private SpriteRenderer sr;
 
+    [Header("Audio Clips")]
+    [SerializeField] private AudioClip build;
+    [SerializeField] private AudioClip explode;
+
     private void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -49,6 +53,7 @@ public class Block : MonoBehaviour, IDamagable
     private void DestroySequence()
     {
         Instantiate(explosionPrefab, gameObject.transform.position, transform.rotation);
+        SoundManager.Instance.PlaySound(explode);
         Destroy(gameObject);
     }
 

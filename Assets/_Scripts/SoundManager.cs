@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
+
+    public static SoundManager Instance;
+
     //KNN the stupid plug in reserved the term "Audio Manager" so i LLST have to call it SoundManager fucking L
     [Header("These are the various Audio Sources")]
     [SerializeField] private GameObject BGMSource;
@@ -14,7 +17,10 @@ public class SoundManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(Instance)
+            Destroy(gameObject);
+        else
+            Instance = this;
     }
 
     // Update is called once per frame

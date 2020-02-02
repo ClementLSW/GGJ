@@ -25,6 +25,7 @@ public class GridController : MonoBehaviour
     [SerializeField] private GameObject turretPrefab;
     [SerializeField] private GameObject repairPrefab;
 
+    [SerializeField] private AudioClip buildClip;
     private enum MoveDirection { UP, DOWN, LEFT, RIGHT };
 
     private Vector2 selectedTile;
@@ -120,6 +121,7 @@ public class GridController : MonoBehaviour
         if (SelectedTileNotEmptyOrVoid())
             return;
 
+        SoundManager.Instance.PlaySound(buildClip);
         GameObject targetPrefab = null;
         switch (comboType)
         {
