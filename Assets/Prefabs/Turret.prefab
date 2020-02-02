@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 403f045d03f3d9c4daace9c2eaaec780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 30
+  Health: 50
   Destructable: 1
   explosionPrefab: {fileID: 7983035133894597257, guid: 214787b1e68ad1a4b9d4dca09bda8e2a,
     type: 3}
@@ -217,7 +217,7 @@ MonoBehaviour:
   firingPoint: {fileID: 126549221167013183}
   ammo: {fileID: 9179417862696032401, guid: 0214ddf1ad899f34cbcc2cee6ac4cbb3, type: 3}
   velocity: 10
-  firingRate: 1
+  firingRate: 1.5
   clip: {fileID: 8300000, guid: b55e345a71e0228468cfa2e432a7f0c5, type: 3}
 --- !u!61 &5297403565954465205
 BoxCollider2D:

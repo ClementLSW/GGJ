@@ -61,7 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &2786071036299852539
 Rigidbody2D:
   serializedVersion: 4
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &2786071036356905503
 Rigidbody2D:
   serializedVersion: 4
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &2786071035931927977
 Rigidbody2D:
   serializedVersion: 4
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &2786071036085532745
 Rigidbody2D:
   serializedVersion: 4
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &2786071037338820318
 Rigidbody2D:
   serializedVersion: 4
@@ -371,7 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &2786071037397141424
 Rigidbody2D:
   serializedVersion: 4
@@ -433,7 +433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &2786071037519540708
 Rigidbody2D:
   serializedVersion: 4
@@ -495,7 +495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &2786071037762455646
 Rigidbody2D:
   serializedVersion: 4
@@ -557,7 +557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &2786071036853785488
 Rigidbody2D:
   serializedVersion: 4
@@ -619,7 +619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &2786071036858086180
 Rigidbody2D:
   serializedVersion: 4
@@ -681,7 +681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &2786071036957916143
 Rigidbody2D:
   serializedVersion: 4
@@ -743,7 +743,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &2786071037162751860
 Rigidbody2D:
   serializedVersion: 4
@@ -805,7 +805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &5935359412577240207
 Rigidbody2D:
   serializedVersion: 4
@@ -867,7 +867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &7576988549060987933
 Rigidbody2D:
   serializedVersion: 4
@@ -929,7 +929,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &3849528051413584132
 Rigidbody2D:
   serializedVersion: 4
@@ -991,7 +991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &1988284825488850181
 Rigidbody2D:
   serializedVersion: 4
@@ -1053,7 +1053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &3870974660188148556
 Rigidbody2D:
   serializedVersion: 4
@@ -1115,7 +1115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &1426622838802537096
 Rigidbody2D:
   serializedVersion: 4
@@ -1177,7 +1177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!1 &2786071036948662933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,7 +1313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &6437704035527645609
 Rigidbody2D:
   serializedVersion: 4
@@ -1375,7 +1375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &2522507864313205296
 Rigidbody2D:
   serializedVersion: 4
@@ -1437,7 +1437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &8033483313885831708
 Rigidbody2D:
   serializedVersion: 4
@@ -1499,7 +1499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 5
+  dmgVal: 2
 --- !u!50 &2064687605394865369
 Rigidbody2D:
   serializedVersion: 4
@@ -1561,7 +1561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 5
+  dmgVal: 2
 --- !u!50 &7966617472713554578
 Rigidbody2D:
   serializedVersion: 4
@@ -1623,7 +1623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 5
+  dmgVal: 2
 --- !u!50 &4035202934151715073
 Rigidbody2D:
   serializedVersion: 4
@@ -1685,7 +1685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &1120671801180854758
 Rigidbody2D:
   serializedVersion: 4
@@ -1747,7 +1747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 5
+  dmgVal: 2
 --- !u!50 &7288082303865668888
 Rigidbody2D:
   serializedVersion: 4
@@ -1809,7 +1809,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &5998258798652934340
 Rigidbody2D:
   serializedVersion: 4
@@ -1871,7 +1871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!50 &3638853708240762231
 Rigidbody2D:
   serializedVersion: 4
@@ -1933,7 +1933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 3
+  dmgVal: 2
 --- !u!1001 &177779679064429845
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4874,12 +4874,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5e8567ba94ab204f861addfdc269eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 100
+  Health: 20
   Destructable: 1
   explosionPrefab: {fileID: 7983035133894597257, guid: 1c0d0ad61cd77dd4bb72597024db338a,
     type: 3}
   fullHP: {fileID: 0}
   halfHP: {fileID: 0}
   explode: {fileID: 8300000, guid: bdfd43f321535824fa0a49170ee0d77b, type: 3}
-  healPerSec: 100
+  healPerSec: 15
   targetBaseToHeal: {fileID: 0}

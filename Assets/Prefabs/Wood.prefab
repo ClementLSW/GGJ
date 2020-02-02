@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58dc7f3c5b80c5e4fa1a201c3d207991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 50
+  Health: 80
   Destructable: 1
   explosionPrefab: {fileID: 7983035133894597257, guid: 214787b1e68ad1a4b9d4dca09bda8e2a,
     type: 3}
