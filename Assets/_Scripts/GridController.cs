@@ -176,6 +176,8 @@ public class GridController : MonoBehaviour
     public void DestroySelectedBuilding()
     {
         GridTile targetTile = gridTiles.Find(x => x.TileIndex == selectedTile);
-        targetTile.building.GetComponent<IDamagable>().MinusHP(10000000);
+
+        if(targetTile.building.GetComponent<IDamagable>() != null)
+            targetTile.building.GetComponent<IDamagable>().MinusHP(10000000);
     }
 }

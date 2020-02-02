@@ -145,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7983035133894597257, guid: f0d565b4c8994ed4fb005c09ec96e171,
     type: 3}
-  dmgVal: 10
+  dmgVal: 5
 --- !u!114 &259353237365037347
 MonoBehaviour:
   m_ObjectHideFlags: 0
