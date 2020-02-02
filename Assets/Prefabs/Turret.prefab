@@ -217,6 +217,8 @@ MonoBehaviour:
   ammo: {fileID: 9179417862696032401, guid: 0214ddf1ad899f34cbcc2cee6ac4cbb3, type: 3}
   velocity: 10
   firingRate: 0.5
+  clip: {fileID: 8300000, guid: b55e345a71e0228468cfa2e432a7f0c5, type: 3}
+  SM: {fileID: 3603437454762408987, guid: 821fdf470de5b684d9ad635970744e3e, type: 3}
 --- !u!61 &5297403565954465205
 BoxCollider2D:
   m_ObjectHideFlags: 0
