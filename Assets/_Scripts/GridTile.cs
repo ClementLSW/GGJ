@@ -6,6 +6,8 @@ using NaughtyAttributes;
 
 public class GridTile : MonoBehaviour
 {
+    public bool isVoidZone;
+
     public Vector2 TileIndex
     {
         get
@@ -16,13 +18,14 @@ public class GridTile : MonoBehaviour
     }
     private SpriteRenderer tileImg;
 
-    public enum TileMode { UNSELECTED, SELECTED };
+    public enum TileMode { UNSELECTED, SELECTED, UNAVAILABLE };
 
     private void OnEnable()
     {
         tileImg = GetComponent<SpriteRenderer>();
     }
 
+    [ReadOnly]
     public GameObject building;
 
     public void SetTileMode(TileMode tileMode)
@@ -35,20 +38,11 @@ public class GridTile : MonoBehaviour
             case TileMode.SELECTED:
                 tileImg.color = new Color(1, 1, 1, 1);
                 break;
+            case TileMode.UNAVAILABLE:
+                tileImg.color = new Color(1, 0.2f, 0.2f, 1);
+                break;
             default:
                 break;
         }
-    }
-
-    [Button]
-    public void SetTileMode_UNSELECTED()
-    {
-        SetTileMode(TileMode.UNSELECTED);
-    }
-
-    [Button]
-    public void SetTileMode_SELECTED()
-    {
-        SetTileMode(TileMode.SELECTED);
     }
 }

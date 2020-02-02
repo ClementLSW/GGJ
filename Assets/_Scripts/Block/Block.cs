@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Block : MonoBehaviour
+public class Block : MonoBehaviour, IDamagable
 {
     public int Health = 100;
     public bool Destructable = true;
@@ -10,7 +10,7 @@ public class Block : MonoBehaviour
     [Space(10)]
     [SerializeField] private GameObject explosionPrefab;
 
-    private void Update()
+    protected void Update()
     {
         if(Destructable && Health <= 0)
         {
@@ -30,5 +30,10 @@ public class Block : MonoBehaviour
     {
         Instantiate(explosionPrefab, gameObject.transform.position, transform.rotation);
         Destroy(gameObject);
+    }
+
+    public void MinusHP(int dmgAmt)
+    {
+        Health -= dmgAmt;
     }
 }
