@@ -208,17 +208,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 30
   Destructable: 1
-  explosionPrefab: {fileID: 7983035133894597257, guid: 1c0d0ad61cd77dd4bb72597024db338a,
+  explosionPrefab: {fileID: 7983035133894597257, guid: 214787b1e68ad1a4b9d4dca09bda8e2a,
     type: 3}
   fullHP: {fileID: 0}
   halfHP: {fileID: 0}
+  explode: {fileID: 8300000, guid: bdfd43f321535824fa0a49170ee0d77b, type: 3}
   turretGun: {fileID: 4717031758653160114}
   firingPoint: {fileID: 126549221167013183}
   ammo: {fileID: 9179417862696032401, guid: 0214ddf1ad899f34cbcc2cee6ac4cbb3, type: 3}
   velocity: 10
-  firingRate: 0.5
+  firingRate: 1
   clip: {fileID: 8300000, guid: b55e345a71e0228468cfa2e432a7f0c5, type: 3}
-  SM: {fileID: 3603437454762408987, guid: 821fdf470de5b684d9ad635970744e3e, type: 3}
 --- !u!61 &5297403565954465205
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -17,7 +17,6 @@ public class Block : MonoBehaviour, IDamagable
     private SpriteRenderer sr;
 
     [Header("Audio Clips")]
-    [SerializeField] private AudioClip build;
     [SerializeField] private AudioClip explode;
 
     private void Start()
@@ -40,14 +39,6 @@ public class Block : MonoBehaviour, IDamagable
             else
                 SetSprite(false);
         }
-    }
-
-    public void DestroyBlock()
-    {
-        if (!Destructable)
-            return;
-
-        Health = 0;
     }
 
     private void DestroySequence()

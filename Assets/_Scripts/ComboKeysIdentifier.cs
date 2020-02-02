@@ -19,9 +19,13 @@ public class ComboKeysIdentifier : MonoBehaviour
     [SerializeField] private int playerNumber;
     [SerializeField] private GridController gc;
 
+    [SerializeField] private Transform player1Base;
+    [SerializeField] private Transform player2Base;
+    [SerializeField] private GameObject bombartment;
+
     public enum ComboKeys { UP, DOWN, LEFT, RIGHT };
 
-    public enum ComboType { BUILD_WOOD, BUILD_METAL, BUILD_TURRET, BUILD_REPAIR }
+    public enum ComboType { BUILD_WOOD, BUILD_METAL, BUILD_TURRET, BUILD_REPAIR, BOMBARTMENT }
     [HideInInspector]
     public UnityEvent On_Build_Block_Combo = new UnityEvent();
     [HideInInspector]
@@ -30,6 +34,8 @@ public class ComboKeysIdentifier : MonoBehaviour
     public UnityEvent On_Build_Turret_Combo = new UnityEvent();
     [HideInInspector]
     public UnityEvent On_Build_Repair_Combo = new UnityEvent();
+    [HideInInspector]
+    public UnityEvent On_Fire_Bombartment_Combo = new UnityEvent();
 
     [Serializable]
     public class Combo
@@ -41,6 +47,11 @@ public class ComboKeysIdentifier : MonoBehaviour
     private List<Combo> combos;
 
     private Queue<ComboKeys> comboHistroy = new Queue<ComboKeys>();
+
+    [SerializeField] private UIAnimator player1Tooltip;
+    [SerializeField] private UIAnimator player2Tooltip;
+
+    private bool tooltipActive = false;
 
     private void Start()
     {
@@ -72,9 +83,10 @@ public class ComboKeysIdentifier : MonoBehaviour
         }
 
         On_Build_Block_Combo.AddListener(delegate { gc.Build(ComboType.BUILD_WOOD); });
-        On_Build_Metal_Combo.AddListener(delegate { gc.Build(ComboType.BUILD_METAL); });
+        On_Build_Metal_Combo.AddListener(delegate { gc.Build(ComboType.BUILD_METAL); }); 
         On_Build_Turret_Combo.AddListener(delegate { gc.Build(ComboType.BUILD_TURRET); });
         On_Build_Repair_Combo.AddListener(delegate { gc.Build(ComboType.BUILD_REPAIR); });
+        On_Fire_Bombartment_Combo.AddListener(delegate { Bombmart(); });
     }
 
     private void Update()
@@ -86,12 +98,39 @@ public class ComboKeysIdentifier : MonoBehaviour
         if (playerNumber == 2)
             if (Gamepad.all[1].rightShoulder.wasPressedThisFrame && comboHistroy.Count == 0)
                 gc.DestroySelectedBuilding();
+
+        if (Gamepad.all[0].leftTrigger.wasPressedThisFrame)
+        {
+            player1Tooltip.Animate_Pos_ToOpposite();
+            tooltipActive = !tooltipActive;
+        }
+
+        if (Gamepad.all[1].leftTrigger.wasPressedThisFrame)
+        {
+            player2Tooltip.Animate_Pos_ToOpposite();
+            tooltipActive = !tooltipActive;
+        }
+    }
+
+    private void Bombmart()
+    {
+        Vector3 targetBombartmentPoint = Vector3.zero;
+
+        if (playerNumber == 1)
+            targetBombartmentPoint = player2Base.position;
+        else
+            targetBombartmentPoint = player1Base.position;
+
+        Instantiate(bombartment, targetBombartmentPoint, Quaternion.identity);
     }
 
     private void AddComboToQueue(ComboKeys comboType)
     {
+        if (tooltipActive)
+            return;
+
         comboHistroy.Enqueue(comboType);
-        if (comboHistroy.Count > 7)
+        if (comboHistroy.Count > 10)
         {
             comboHistroy.Dequeue();
             Destroy(targetUIPanel.GetChild(0).gameObject);
@@ -129,6 +168,9 @@ public class ComboKeysIdentifier : MonoBehaviour
 
     private void CheckForCombo()
     {
+        if (tooltipActive)
+            return;
+
         List<Combo> filteredCombo = combos.Where(x => x.ComboList.Count == comboHistroy.Count).ToList();
 
         foreach (Combo combo in filteredCombo)
@@ -148,6 +190,9 @@ public class ComboKeysIdentifier : MonoBehaviour
                         break;
                     case ComboType.BUILD_REPAIR:
                         On_Build_Repair_Combo.Invoke();
+                        break;
+                    case ComboType.BOMBARTMENT:
+                        On_Fire_Bombartment_Combo.Invoke();
                         break;
                 }
                 ClearComboHistroy();

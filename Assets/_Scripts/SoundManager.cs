@@ -31,11 +31,10 @@ public class SoundManager : MonoBehaviour
 
     public void PlaySound(AudioClip ac)
     {
-        foreach(AudioSource AS in MiscAudioSources){
-            if(AS.isPlaying){
-                break;
-            }
-            else{
+        foreach (AudioSource AS in MiscAudioSources)
+        {
+            if (!AS.isPlaying)
+            {
                 AS.clip = ac;
                 AS.Play();
             }

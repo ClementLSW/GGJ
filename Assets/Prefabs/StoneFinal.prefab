@@ -96,10 +96,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 200
   Destructable: 1
-  explosionPrefab: {fileID: 7983035133894597257, guid: 1c0d0ad61cd77dd4bb72597024db338a,
+  explosionPrefab: {fileID: 7983035133894597257, guid: 214787b1e68ad1a4b9d4dca09bda8e2a,
     type: 3}
   fullHP: {fileID: 21300000, guid: 11ca320443c6c46459954eb4490fc49e, type: 3}
   halfHP: {fileID: 21300000, guid: fdcf8d1dd13545c45a07bbc364dc28cf, type: 3}
+  explode: {fileID: 8300000, guid: bdfd43f321535824fa0a49170ee0d77b, type: 3}
 --- !u!61 &-8068826066447036230
 BoxCollider2D:
   m_ObjectHideFlags: 0

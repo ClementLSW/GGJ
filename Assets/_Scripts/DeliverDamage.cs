@@ -10,8 +10,9 @@ public class DeliverDamage : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log(collision.gameObject.name);
-        collision.gameObject.GetComponent<IDamagable>().MinusHP(dmgVal);
 
+        if(collision.gameObject.GetComponent<IDamagable>() != null)
+            collision.gameObject.GetComponent<IDamagable>().MinusHP(dmgVal);
 
         Instantiate(explosionPrefab, gameObject.transform.position, transform.rotation);
         Destroy(gameObject);

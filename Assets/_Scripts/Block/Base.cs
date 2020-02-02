@@ -12,21 +12,21 @@ public class Base : Block
 
     private new void Update()
     {
-        base.Update();
-
-        if(Health <= 0)
+        if (Health <= 0)
         {
             if (PlayerID == 1 && player1Win != null)
             {
                 player1Win.Animate_Pos_ToOpposite();
-                Destroy(player1Win.gameObject);
+                Destroy(player2Win.gameObject);
             }
 
             if (PlayerID == 2 && player2Win != null)
             {
                 player2Win.Animate_Pos_ToOpposite();
-                Destroy(player2Win.gameObject);
+                Destroy(player1Win.gameObject);
             }
         }
+
+        base.Update();
     }
 }

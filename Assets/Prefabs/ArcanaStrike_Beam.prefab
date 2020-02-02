@@ -110,6 +110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 627538393184278459}
   - component: {fileID: 1434654062277070350}
+  - component: {fileID: 115616776}
   m_Layer: 0
   m_Name: ArcanaStrike_Beam
   m_TagString: Untagged
@@ -181,3 +182,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &115616776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7169191604901564447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0808ee9879ccb534287d955c297d0e4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
