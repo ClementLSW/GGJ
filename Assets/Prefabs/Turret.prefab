@@ -69,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 17463fba6d5ff1c4cb92761483376b82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -121,7 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2386379850609642164}
   - component: {fileID: 7255747701670163716}
-  - component: {fileID: -4314059381732437219}
+  - component: {fileID: 8214177268107028578}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -193,7 +193,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-4314059381732437219
+--- !u!114 &8214177268107028578
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,10 +202,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4440721335662364595}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58dc7f3c5b80c5e4fa1a201c3d207991, type: 3}
+  m_Script: {fileID: 11500000, guid: 403f045d03f3d9c4daace9c2eaaec780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 100
   Destructable: 1
   explosionPrefab: {fileID: 7983035133894597257, guid: 1c0d0ad61cd77dd4bb72597024db338a,
     type: 3}
+  turretGun: {fileID: 4717031758653160114}
+  firingPoint: {fileID: 126549221167013183}
+  ammo: {fileID: 9179417862696032401, guid: 0214ddf1ad899f34cbcc2cee6ac4cbb3, type: 3}
+  velocity: 10
+  firingRate: 0.5

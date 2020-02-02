@@ -44,36 +44,36 @@ public class InputManager : MonoBehaviour
         else
             Destroy(gameObject);
 
-        On_P1_DPAD_UP_Click.AddListener(delegate { Debug.Log("On_P1_DPAD_UP_Click"); });
-        On_P1_DPAD_DOWN_Click.AddListener(delegate { Debug.Log("On_P1_DPAD_DOWN_Click"); });
-        On_P1_DPAD_LEFT_Click.AddListener(delegate { Debug.Log("On_P1_DPAD_LEFT_Click"); });
-        On_P1_DPAD_RIGHT_Click.AddListener(delegate { Debug.Log("On_P1_DPAD_RIGHT_Click"); });
+        //On_P1_DPAD_UP_Click.AddListener(delegate { Debug.Log("On_P1_DPAD_UP_Click"); });
+        //On_P1_DPAD_DOWN_Click.AddListener(delegate { Debug.Log("On_P1_DPAD_DOWN_Click"); });
+        //On_P1_DPAD_LEFT_Click.AddListener(delegate { Debug.Log("On_P1_DPAD_LEFT_Click"); });
+        //On_P1_DPAD_RIGHT_Click.AddListener(delegate { Debug.Log("On_P1_DPAD_RIGHT_Click"); });
 
-        On_P1_LB_Click.AddListener(delegate { Debug.Log("On_P1_LB_Click"); });
-        On_P1_LT_Click.AddListener(delegate { Debug.Log("On_P1_LT_Click"); });
-        On_P1_RB_Click.AddListener(delegate { Debug.Log("On_P1_RB_Click"); });
-        On_P1_RT_Click.AddListener(delegate { Debug.Log("On_P1_RT_Click"); });
+        //On_P1_LB_Click.AddListener(delegate { Debug.Log("On_P1_LB_Click"); });
+        //On_P1_LT_Click.AddListener(delegate { Debug.Log("On_P1_LT_Click"); });
+        //On_P1_RB_Click.AddListener(delegate { Debug.Log("On_P1_RB_Click"); });
+        //On_P1_RT_Click.AddListener(delegate { Debug.Log("On_P1_RT_Click"); });
 
-        On_P1_KEYUP_Click.AddListener(delegate { Debug.Log("On_P1_KEYUP_Click"); });
-        On_P1_KEYDOWN_Click.AddListener(delegate { Debug.Log("On_P1_KEYDOWN_Click"); });
-        On_P1_KEYLEFT_Click.AddListener(delegate { Debug.Log("On_P1_KEYLEFT_Click"); });
-        On_P1_KEYRIGHT_Click.AddListener(delegate { Debug.Log("On_P1_KEYRIGHT_Click"); });
+        //On_P1_KEYUP_Click.AddListener(delegate { Debug.Log("On_P1_KEYUP_Click"); });
+        //On_P1_KEYDOWN_Click.AddListener(delegate { Debug.Log("On_P1_KEYDOWN_Click"); });
+        //On_P1_KEYLEFT_Click.AddListener(delegate { Debug.Log("On_P1_KEYLEFT_Click"); });
+        //On_P1_KEYRIGHT_Click.AddListener(delegate { Debug.Log("On_P1_KEYRIGHT_Click"); });
 
 
-        On_P2_DPAD_UP_Click.AddListener(delegate { Debug.Log("On_P2_DPAD_UP_Click"); });
-        On_P2_DPAD_DOWN_Click.AddListener(delegate { Debug.Log("On_P2_DPAD_DOWN_Click"); });
-        On_P2_DPAD_LEFT_Click.AddListener(delegate { Debug.Log("On_P2_DPAD_LEFT_Click"); });
-        On_P2_DPAD_RIGHT_Click.AddListener(delegate { Debug.Log("On_P2_DPAD_RIGHT_Click"); });
+        //On_P2_DPAD_UP_Click.AddListener(delegate { Debug.Log("On_P2_DPAD_UP_Click"); });
+        //On_P2_DPAD_DOWN_Click.AddListener(delegate { Debug.Log("On_P2_DPAD_DOWN_Click"); });
+        //On_P2_DPAD_LEFT_Click.AddListener(delegate { Debug.Log("On_P2_DPAD_LEFT_Click"); });
+        //On_P2_DPAD_RIGHT_Click.AddListener(delegate { Debug.Log("On_P2_DPAD_RIGHT_Click"); });
 
-        On_P2_LB_Click.AddListener(delegate { Debug.Log("On_P2_LB_Click"); });
-        On_P2_LT_Click.AddListener(delegate { Debug.Log("On_P2_LT_Click"); });
-        On_P2_RB_Click.AddListener(delegate { Debug.Log("On_P2_RB_Click"); });
-        On_P2_RT_Click.AddListener(delegate { Debug.Log("On_P2_RT_Click"); });
+        //On_P2_LB_Click.AddListener(delegate { Debug.Log("On_P2_LB_Click"); });
+        //On_P2_LT_Click.AddListener(delegate { Debug.Log("On_P2_LT_Click"); });
+        //On_P2_RB_Click.AddListener(delegate { Debug.Log("On_P2_RB_Click"); });
+        //On_P2_RT_Click.AddListener(delegate { Debug.Log("On_P2_RT_Click"); });
 
-        On_P2_KEYUP_Click.AddListener(delegate { Debug.Log("On_P2_KEYUP_Click"); });
-        On_P2_KEYDOWN_Click.AddListener(delegate { Debug.Log("On_P2_KEYDOWN_Click"); });
-        On_P2_KEYLEFT_Click.AddListener(delegate { Debug.Log("On_P2_KEYLEFT_Click"); });
-        On_P2_KEYRIGHT_Click.AddListener(delegate { Debug.Log("On_P2_KEYRIGHT_Click"); });
+        //On_P2_KEYUP_Click.AddListener(delegate { Debug.Log("On_P2_KEYUP_Click"); });
+        //On_P2_KEYDOWN_Click.AddListener(delegate { Debug.Log("On_P2_KEYDOWN_Click"); });
+        //On_P2_KEYLEFT_Click.AddListener(delegate { Debug.Log("On_P2_KEYLEFT_Click"); });
+        //On_P2_KEYRIGHT_Click.AddListener(delegate { Debug.Log("On_P2_KEYRIGHT_Click"); });
 
         Debug.Log("Controllers: " + Gamepad.all.Count);
     }

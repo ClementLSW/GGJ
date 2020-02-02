@@ -49,6 +49,18 @@ public class GridController : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (SelectedTileNotEmptyOrVoid())
+            gridTiles.Find(x => x.TileIndex == selectedTile).SetTileMode(GridTile.TileMode.UNAVAILABLE);
+    }
+
+    private bool SelectedTileNotEmptyOrVoid()
+    {
+        GridTile tile = gridTiles.Find(x => x.TileIndex == selectedTile);
+        return tile.building != null || tile.isVoidZone;
+    }
+
     private void SetAllTiles()
     {
         gridTiles = GetComponentsInChildren<GridTile>().ToList();
@@ -104,6 +116,9 @@ public class GridController : MonoBehaviour
 
     public void Build(ComboKeysIdentifier.ComboType comboType)
     {
+        if (SelectedTileNotEmptyOrVoid())
+            return;
+
         GameObject targetPrefab = null;
         switch (comboType)
         {
@@ -150,6 +165,6 @@ public class GridController : MonoBehaviour
     public void DestroySelectedBuilding()
     {
         GridTile targetTile = gridTiles.Find(x => x.TileIndex == selectedTile);
-        targetTile.building.GetComponent<Block>().DestroyBlock();
+        targetTile.building.GetComponent<IDamagable>().MinusHP(10000000);
     }
 }
