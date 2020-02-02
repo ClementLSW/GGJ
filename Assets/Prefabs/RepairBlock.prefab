@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4248917088320718834}
   - component: {fileID: 3981844530151815810}
   - component: {fileID: 7030086898090293021}
+  - component: {fileID: 8598308815929463014}
   m_Layer: 0
   m_Name: RepairBlock
   m_TagString: Untagged
@@ -107,3 +108,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.4372542, y: 2.424666}
   m_EdgeRadius: 0
+--- !u!114 &8598308815929463014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857145597306492508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e8567ba94ab204f861addfdc269eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 100
+  Destructable: 1
+  explosionPrefab: {fileID: 7983035133894597257, guid: 1c0d0ad61cd77dd4bb72597024db338a,
+    type: 3}
+  fullHP: {fileID: 0}
+  halfHP: {fileID: 0}
+  healPerSec: 100
+  targetBaseToHeal: {fileID: 0}

@@ -5,16 +5,36 @@ using UnityEngine;
 public class Block : MonoBehaviour, IDamagable
 {
     public int Health = 100;
+    private int maxHeath;
     public bool Destructable = true;
 
     [Space(10)]
     [SerializeField] private GameObject explosionPrefab;
+
+    [Header("Sprites")]
+    [SerializeField] private Sprite fullHP;
+    [SerializeField] private Sprite halfHP;
+    private SpriteRenderer sr;
+
+    private void Start()
+    {
+        sr = GetComponent<SpriteRenderer>();
+        maxHeath = Health;
+    }
 
     protected void Update()
     {
         if(Destructable && Health <= 0)
         {
             DestroySequence();
+        }
+
+        if (fullHP != null && halfHP != null)
+        {
+            if (Health > maxHeath / 2)
+                SetSprite(true);
+            else
+                SetSprite(false);
         }
     }
 
@@ -35,5 +55,13 @@ public class Block : MonoBehaviour, IDamagable
     public void MinusHP(int dmgAmt)
     {
         Health -= dmgAmt;
+    }
+
+    public void SetSprite(bool isFullHP)
+    {
+        if (isFullHP)
+            sr.sprite = fullHP;
+        else
+            sr.sprite = halfHP;
     }
 }

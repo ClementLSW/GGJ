@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7938062621944999986}
   - component: {fileID: 6192963330603569367}
   - component: {fileID: 251161649664858610}
+  - component: {fileID: 259353237365037347}
   m_Layer: 8
   m_Name: Missile
   m_TagString: Untagged
@@ -145,3 +146,16 @@ MonoBehaviour:
   explosionPrefab: {fileID: 7983035133894597257, guid: 1c0d0ad61cd77dd4bb72597024db338a,
     type: 3}
   dmgVal: 10
+--- !u!114 &259353237365037347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9179417862696032401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a2d4a0e4e755c46a5a9569b894372a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 5

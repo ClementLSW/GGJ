@@ -21,13 +21,15 @@ public class ComboKeysIdentifier : MonoBehaviour
 
     public enum ComboKeys { UP, DOWN, LEFT, RIGHT };
 
-    public enum ComboType { BUILD_WOOD, BUILD_METAL, BUILD_TURRET }
+    public enum ComboType { BUILD_WOOD, BUILD_METAL, BUILD_TURRET, BUILD_REPAIR }
     [HideInInspector]
     public UnityEvent On_Build_Block_Combo = new UnityEvent();
     [HideInInspector]
     public UnityEvent On_Build_Metal_Combo = new UnityEvent();
     [HideInInspector]
     public UnityEvent On_Build_Turret_Combo = new UnityEvent();
+    [HideInInspector]
+    public UnityEvent On_Build_Repair_Combo = new UnityEvent();
 
     [Serializable]
     public class Combo
@@ -72,6 +74,7 @@ public class ComboKeysIdentifier : MonoBehaviour
         On_Build_Block_Combo.AddListener(delegate { gc.Build(ComboType.BUILD_WOOD); });
         On_Build_Metal_Combo.AddListener(delegate { gc.Build(ComboType.BUILD_METAL); });
         On_Build_Turret_Combo.AddListener(delegate { gc.Build(ComboType.BUILD_TURRET); });
+        On_Build_Repair_Combo.AddListener(delegate { gc.Build(ComboType.BUILD_REPAIR); });
     }
 
     private void Update()
@@ -142,6 +145,9 @@ public class ComboKeysIdentifier : MonoBehaviour
                         break;
                     case ComboType.BUILD_TURRET:
                         On_Build_Turret_Combo.Invoke();
+                        break;
+                    case ComboType.BUILD_REPAIR:
+                        On_Build_Repair_Combo.Invoke();
                         break;
                 }
                 ClearComboHistroy();

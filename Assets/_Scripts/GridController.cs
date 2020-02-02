@@ -23,6 +23,7 @@ public class GridController : MonoBehaviour
     [SerializeField] private GameObject woodPrefab;
     [SerializeField] private GameObject metalPrefab;
     [SerializeField] private GameObject turretPrefab;
+    [SerializeField] private GameObject repairPrefab;
 
     private enum MoveDirection { UP, DOWN, LEFT, RIGHT };
 
@@ -131,10 +132,18 @@ public class GridController : MonoBehaviour
             case ComboKeysIdentifier.ComboType.BUILD_TURRET:
                 targetPrefab = turretPrefab;
                 break;
+            case ComboKeysIdentifier.ComboType.BUILD_REPAIR:
+                targetPrefab = repairPrefab;
+                break;
         }
 
         GridTile targetTile = gridTiles.Find(x => x.TileIndex == selectedTile);
         GameObject newBuilding = Instantiate(targetPrefab, targetTile.transform.position, Quaternion.identity);
+
+        if (newBuilding.GetComponent<Repair>())
+            newBuilding.GetComponent<Repair>().targetBaseToHeal = 
+                FindObjectsOfType<Base>().ToList().Find(x => x.PlayerID == playerNumber);
+
         targetTile.building = newBuilding;
     }
 

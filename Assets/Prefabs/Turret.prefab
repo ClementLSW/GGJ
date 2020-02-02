@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 2386379850609642164}
   - component: {fileID: 7255747701670163716}
   - component: {fileID: 8214177268107028578}
+  - component: {fileID: 5297403565954465205}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -205,12 +206,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 403f045d03f3d9c4daace9c2eaaec780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 100
+  Health: 30
   Destructable: 1
   explosionPrefab: {fileID: 7983035133894597257, guid: 1c0d0ad61cd77dd4bb72597024db338a,
     type: 3}
+  fullHP: {fileID: 0}
+  halfHP: {fileID: 0}
   turretGun: {fileID: 4717031758653160114}
   firingPoint: {fileID: 126549221167013183}
   ammo: {fileID: 9179417862696032401, guid: 0214ddf1ad899f34cbcc2cee6ac4cbb3, type: 3}
   velocity: 10
   firingRate: 0.5
+--- !u!61 &5297403565954465205
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4440721335662364595}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
