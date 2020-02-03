@@ -8,7 +8,11 @@ public class RestartScene : MonoBehaviour
 {
     public void Update()
     {
-        if(Gamepad.all[0].leftTrigger.wasPressedThisFrame && Gamepad.all[0].rightTrigger.wasPressedThisFrame)
+        if(Gamepad.all[0].leftTrigger.isPressed && Gamepad.all[0].rightTrigger.isPressed)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+
+        if (Gamepad.all[1].leftTrigger.isPressed && Gamepad.all[1].rightTrigger.isPressed)
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

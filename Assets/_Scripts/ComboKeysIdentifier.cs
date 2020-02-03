@@ -51,7 +51,7 @@ public class ComboKeysIdentifier : MonoBehaviour
     [SerializeField] private UIAnimator player1Tooltip;
     [SerializeField] private UIAnimator player2Tooltip;
 
-    private bool tooltipActive = false;
+    public bool tooltipActive = false;
 
     private void Start()
     {
@@ -99,13 +99,13 @@ public class ComboKeysIdentifier : MonoBehaviour
             if (Gamepad.all[1].rightShoulder.wasPressedThisFrame && comboHistroy.Count == 0)
                 gc.DestroySelectedBuilding();
 
-        if (Gamepad.all[0].leftTrigger.wasPressedThisFrame)
+        if (Gamepad.all[0].leftTrigger.wasPressedThisFrame && playerNumber == 1)
         {
             player1Tooltip.Animate_Pos_ToOpposite();
             tooltipActive = !tooltipActive;
         }
 
-        if (Gamepad.all[1].leftTrigger.wasPressedThisFrame)
+        if (Gamepad.all[1].leftTrigger.wasPressedThisFrame && playerNumber == 2)
         {
             player2Tooltip.Animate_Pos_ToOpposite();
             tooltipActive = !tooltipActive;
@@ -195,8 +195,8 @@ public class ComboKeysIdentifier : MonoBehaviour
                         On_Fire_Bombartment_Combo.Invoke();
                         break;
                 }
-                ClearComboHistroy();
             }
         }
+        ClearComboHistroy();
     }
 }
